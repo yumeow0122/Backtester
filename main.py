@@ -1,3 +1,6 @@
-import pandas as pd
+from agent import Agent
 
-print("success.")
+agent = Agent()
+
+data = agent.get_data('BTCUSDT', '5m', '1 day')
+print(data)

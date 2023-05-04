@@ -1,9 +1,10 @@
 import pandas as pd
 
 UTC_OFFSET = 28800000
-class DataFetcher:
+
+class DataController:
     def __init__(self):
-        self.data = None
+        pass
         
     def get_data(client, symbol, interval, look_back):        
         frame = pd.DataFrame(columns=range(6))

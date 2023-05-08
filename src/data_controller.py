@@ -6,6 +6,7 @@ class DataController:
     def __init__(self):
         pass
         
+    @staticmethod
     def get_data(client, symbol, interval, look_back):        
         frame = pd.DataFrame(columns=range(6))
         frame = pd.DataFrame(client.futures_historical_klines(symbol, interval, look_back + ' ago UTC'))

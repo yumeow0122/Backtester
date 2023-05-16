@@ -2,7 +2,7 @@ import pandas as pd
 
 UTC_OFFSET = 28800000
 
-class DataController:
+class DataFetcher:
     def __init__(self):
         pass
         

@@ -8,10 +8,12 @@ RUN wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz && \
   ./configure --prefix=/usr && \
   make && \
   make install
+RUN pip install TA-Lib
+RUN rm -R ta-lib ta-lib-0.4.0-src.tar.gz
 
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
-RUN rm -R ta-lib ta-lib-0.4.0-src.tar.gz
+#RUN rm -R ta-lib ta-lib-0.4.0-src.tar.gz
 
 COPY . .
 
